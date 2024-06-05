@@ -1,7 +1,7 @@
 const game_clock = 1000;
 const block_side_length = 30;
-const rows = 40;
-const columns = 40;
+const rows = 22;
+const columns = 23;
 const score_worth = 10;
 
 

@@ -9,34 +9,38 @@
 </head>
 <body>
     <div class="maya">
-        T E T R I S
-        
+        T E T R I S   
     </div> 
+
     <div class="name">
         TETRIS
-        
     </div>
-    <div class="game">
-        <div class="square">
-            <canvas id="game-canvas" width="720" height="680" style="background-color: antiquewhite;"></canvas>
-            <h2 id="scoreboard">Score: 00</h2>
-        </div>
-        <div class="score">
-            <div class="nextpawn">
 
+    <div class="game">
+
+        <div class="square">
+            <canvas id="game-canvas" width="690" height="660" style="background-color: antiquewhite;"></canvas>
+        </div>
+
+        <div class="score">
+            <div class="scoreboard">
+                <h2 id="scoreboard">Score: 00</h2>
+            </div>
+            
+            <div class="nextpawn">
+                <canvas id="next-canvas" width="210" height="120" style="background-color: antiquewhite;"></canvas>
             </div>
             <div class="name2">
-                TETRIS
-                
-            </div>
+                TETRIS 
+            </div>          
         </div>
-        
 
     </div> 
-    <canvas id="game-canvas" width="700" height="600" style="background-color: antiquewhite;">
 
+    <canvas id="game-canvas" width="700" height="600" style="background-color: antiquewhite;">
+        <button id="reset-button">Reset</button>
     </canvas>
-    <h2 id="scoreboard">Score: 00</h2>
+    
     <script src="constants.js"></script>
     <script src="piece.js"></script>
     <script src="gamemodel.js"></script>

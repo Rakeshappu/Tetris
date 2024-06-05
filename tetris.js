@@ -1,7 +1,12 @@
 let canvas = document.getElementById("game-canvas");
+let nextcanvas = document.getElementById("next-canvas");
 let scoreboard = document.getElementById("scoreboard");
+ 
+let nextpawn = document.querySelector(".nextpawn");
 let ctx = canvas.getContext("2d");
+let nxtctx = nextcanvas.getContext("2d");
 ctx.scale(block_side_length, block_side_length);
+nxtctx.scale(block_side_length, block_side_length);
 
 let model = new gameModel(ctx);
 let score = 0;
@@ -13,11 +18,13 @@ let newGameState = () => {
         const newPiece = new Piece(shapes[rand], ctx);
         model.fallingPiece = newPiece;
         model.moveDown();
+        nxtctx.innerHTML = newPiece;
+
     } else {
         model.moveDown();
     }
 };
-
+   
 setInterval(() => {
     newGameState();
 }, game_clock);
